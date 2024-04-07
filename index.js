@@ -1,35 +1,17 @@
-const people = [
-    {
-      name: "John",
-      age: 17,
-    },
-    {
-      name: "Jane",
-      age: 20,
-    },
-    {
-      name: "Mary",
-      age: 25,
-    },
-    {
-      name: "Peter",
-      age: 30,
-    },
-    {
-      name: "Paul",
-      age: 35,
-    },
-  ];
-  
-  function verifyAdulthood(personName, personAge) {
-    if (personAge >= 18) return `Welcome, ${personName}!`;
-  
-    return `You are not old enough to enter, ${personName}.`;
-  }
-
-for (const person of people) {
-    const name = person.name;
-    const age = person.age;
-    const result = verifyAdulthood(name, age);
-    console.log(result);
+function createIncrementFunction(incrementBy) {
+  return function(score) {
+      return score + incrementBy;
+  };
 }
+
+const incrementBy3 = createIncrementFunction(3);
+const currentScore = 10;
+const newScore = incrementBy3(currentScore);
+
+console.log(`Current score: ${currentScore}, New score after incrementing by 3: ${newScore}`);
+
+//Video Emulated
+const person = { name: "Jordan Black", age: 18, isAdult: true, };
+function createGreeting(Individual) { return (salutation) => '${salutation}, ${individual.name}!'; }
+
+const greetJohn = createGreeting(person); console.log(greetJohn("Hello")); console.log(greetJohn("Good morning"));

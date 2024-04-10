@@ -38,7 +38,33 @@ function renameOdds(p) {
     }
   }
 
+<<<<<<< HEAD
   return p;
 }
 
 console.log(renameOdds(people));
+=======
+const updatedPerson = updatePersonName(person, "Jane Doe");
+console.log(updatedPerson);
+
+const person = {
+  name: "John Doe",
+  age: 23,
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zip: "10001",
+  },
+};
+
+function updatePersonName = (p, newName) {
+  const p2Update = { ...p };
+
+  p2Update.name = newName;
+  return p;
+}
+
+const updatedPerson = updatePersonName(person, "Jane Doe");
+console.log(updatedPerson);
+>>>>>>> 14dd79c8bb5d2196d0b0e30719bddfac5041574f

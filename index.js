@@ -1,17 +1,13 @@
-function createIncrementFunction(incrementBy) {
-  return function(score) {
-      return score + incrementBy;
-  };
-}
+const person = {
+  name: "John Doe",
+  age: 23,
+};
 
-const incrementBy3 = createIncrementFunction(3);
-const currentScore = 10;
-const newScore = incrementBy3(currentScore);
+const updatePersonName = (p, newName) => ({
+  ...p,
+  name: newName,
+  hobbies: ["reading", "writing"],
+});
 
-console.log(`Current score: ${currentScore}, New score after incrementing by 3: ${newScore}`);
-
-//Video Emulated
-const person = { name: "Jordan Black", age: 18, isAdult: true, };
-function createGreeting(Individual) { return (salutation) => '${salutation}, ${individual.name}!'; }
-
-const greetJohn = createGreeting(person); console.log(greetJohn("Hello")); console.log(greetJohn("Good morning"));
+const updatedPerson = updatePersonName(person, "Jane Doe");
+console.log(updatedPerson);
